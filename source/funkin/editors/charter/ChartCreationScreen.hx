@@ -132,6 +132,12 @@ class ChartCreationScreen extends UISubstateWindow {
 		}, 125);
 		add(closeButton);
 		closeButton.color = 0xFFFF0000;
+
+		#if mobile
+		addVPad(UP_DOWN, A_B);
+		addVPadCamera();
+		vPad.visible = true;
+		#end
 	}
 
 	public override function update(elapsed:Float) {
