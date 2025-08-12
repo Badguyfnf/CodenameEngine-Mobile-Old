@@ -34,6 +34,12 @@ class ChartCreationScreen extends UISubstateWindow {
 
 		super.create();
 
+		#if mobile
+		addVPad(UP_DOWN, A_B);
+		addVPadCamera();
+		vPad.visible = true;
+		#end
+
 		function addLabelOn(ui:UISprite, text:String):UIText {
 			var text:UIText = new UIText(ui.x, ui.y - 24, 0, text);
 			ui.members.push(text);
@@ -132,12 +138,6 @@ class ChartCreationScreen extends UISubstateWindow {
 		}, 125);
 		add(closeButton);
 		closeButton.color = 0xFFFF0000;
-
-		#if mobile
-		addVPad(UP_DOWN, A_B);
-		addVPadCamera();
-		vPad.visible = true;
-		#end
 	}
 
 	public override function update(elapsed:Float) {
