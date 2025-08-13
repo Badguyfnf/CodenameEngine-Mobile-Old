@@ -56,6 +56,13 @@ class OptionsMenu extends TreeMenu {
 		bg.antialiasing = true;
 		add(bg);
 
+		if (#if mobile || vPad.buttonC.justPressed #end) {
+					#if mobile
+					removeVPad();
+					#end
+					openState(new funkin.mobile.CustomControlsState());
+				}
+
 		main = new OptionsScreen("Options", "Select a category to continue.", [for(o in mainOptions) new TextOption(o.name, o.desc, function() {
 			if (o.substate != null) {
 				persistentUpdate = false;
