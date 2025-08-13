@@ -57,9 +57,7 @@ class OptionsMenu extends TreeMenu {
 		add(bg);
 
 		if (#if mobile || vPad.buttonC.justPressed #end) {
-					#if mobile
 					removeVPad();
-					#end
 					openState(new funkin.mobile.CustomControlsState());
 				}
 
