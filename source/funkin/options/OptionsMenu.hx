@@ -26,11 +26,11 @@ class OptionsMenu extends TreeMenu {
 			desc: 'Change Appearance options such as Flashing menus...',
 			state: AppearanceOptions
 		},
-		{
+		/*{
 			name: 'Mobile Controls >',
 			desc: 'Change Mobile Controls...',
 			state: CustomControlsState
-		},
+		},*/
 		{
 			name: 'Miscellaneous >',
 			desc: 'Use this menu to reset save data or engine settings.',
@@ -102,7 +102,7 @@ class OptionsMenu extends TreeMenu {
 			}
 		}
       #if mobile
-	  addVPad(UP_DOWN, A_B);
+	  addVPad(UP_DOWN, A_B_C);
 	  addVPadCamera();
 	  vPad.visible = true;
 	  #end
